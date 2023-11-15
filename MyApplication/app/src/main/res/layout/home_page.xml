@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- App bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/system_accent1_700"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/subtitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Rest of the content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_dynamic_primary90"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+
+
+            >
+
+            <!-- Other views in the LinearLayout -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="start"
+                android:text="Your Placements"
+                android:textColor="#041051"
+                android:textSize="20sp"
+                android:textStyle="normal">
+
+            </TextView>
+            <Space
+                android:layout_width="140dp"
+                android:layout_height="0dp">
+
+            </Space>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="start"
+                android:text="View All"
+                android:textColor="#041051"
+                android:textSize="20sp"
+                android:autoLink="web"
+                android:textStyle="normal">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/b1"
+                            android:onClick="b1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/facebook"
+
+
+                            >
+
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/b2"
+                            android:onClick="b2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/linkedin"
+
+
+                            >
+
+
+                        </ImageView>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Infosys"
+                        android:textSize="20sp"
+                        android:textStyle="bold" >
+
+                    </TextView>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/b3"
+                            android:onClick="b3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/facebook"
+
+
+                            >
+
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/b4"
+                            android:onClick="b4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/linkedin"
+
+
+                            >
+
+
+                        </ImageView>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/goldman"
+                        android:layout_margin="10dp"
+                        android:id="@+id/img1"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GoldMan Sachs"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="start"
+            android:text="Welcome to Christ Placement Cell"
+            android:textColor="#041051"
+            android:textSize="20sp"
+            android:textStyle="normal">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo"
+
+
+                app:cardBackgroundColor="#6E83EF"
+
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="45000+ Students \nPlaced"
+                    android:textStyle="bold">
+
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo"
+
+
+                app:cardBackgroundColor="#6E83EF"
+
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="112+ Companies"
+                    android:textStyle="bold">
+
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/photo"
+
+
+            app:cardBackgroundColor="#6E83EF"
+
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Full Placement \n record"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
